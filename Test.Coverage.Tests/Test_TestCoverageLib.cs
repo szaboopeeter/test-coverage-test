@@ -5,17 +5,18 @@ namespace Test.Coverage.Tests;
 public class Test_TestCoverageLib
 {
     [Fact]
-    public void TestFunction_WhenBranch_ReturnsTrue()
+    public void TestFunction_WhenBranchFalse_ReturnsTwo()
     {
         var lib = new TestCoverageLib();
-        var result = lib.TestFunction(true);
-        Assert.Equal(1, result);
+        var result = lib.TestFunction(false);
+        Assert.Equal(2, result);
     }
 
     [Fact]
-    public void ThrowFunction_WhenBranch_Throws()
+    public void ThrowFunction_WhenBranchFalse_DoesNotThrow()
     {
         var lib = new TestCoverageLib();
-        Assert.Throws<NotImplementedException>(() => lib.ThrowFunction(true));
+        // Just run to see it does not throw.
+        lib.ThrowFunction(false);
     }
 }
