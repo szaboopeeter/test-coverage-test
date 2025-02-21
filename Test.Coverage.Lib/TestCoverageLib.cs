@@ -16,4 +16,9 @@ public class TestCoverageLib
     {
         if (shouldThrow) { throw new NotImplementedException(); }
     }
+
+    public int TernaryFunction(bool branch)
+    {
+        return branch ? 1 : 2;
+    }
 }

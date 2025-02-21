@@ -19,4 +19,12 @@ public class Test_TestCoverageLib
         // Just run to see it does not throw.
         lib.ThrowFunction(false);
     }
+
+    [Fact]
+    public void TernaryFunction_WhenTrue_ReturnsOne()
+    {
+        var lib = new TestCoverageLib();
+        var result = lib.TernaryFunction(true);
+        Assert.Equal(1, result);
+    }
 }
