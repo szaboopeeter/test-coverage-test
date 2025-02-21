@@ -11,4 +11,11 @@ public class Test_TestCoverageLib
         var result = lib.TestFunction(true);
         Assert.Equal(1, result);
     }
+
+    [Fact]
+    public void ThrowFunction_WhenBranch_Throws()
+    {
+        var lib = new TestCoverageLib();
+        Assert.Throws<NotImplementedException>(() => lib.ThrowFunction(true));
+    }
 }

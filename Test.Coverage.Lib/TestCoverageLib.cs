@@ -11,4 +11,9 @@ public class TestCoverageLib
 
         return 2;
     }
+
+    public void ThrowFunction(bool shouldThrow)
+    {
+        if (shouldThrow) { throw new NotImplementedException(); }
+    }
 }
